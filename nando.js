@@ -1,3 +1,2 @@
 nando = 17
-pedro = 198
-camilo=675
+julian = 8678
