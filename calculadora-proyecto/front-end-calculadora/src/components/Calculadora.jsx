@@ -29,7 +29,7 @@ function Calculadora(){
 
     return (
         <div className="container">
-            <h1 id="txtCalculadora">CALCULADORA</h1>
+            <h1 id="txtCalculadora">CALCULADORA XYZW</h1>
             <form>
                 <input type="text" className="number" onChange={(e)=>{setNumber1(e.target.value)}}/><br />
                 <input type="text" className="number" onChange={(e)=>{setNumber2(e.target.value)}}/><br />
