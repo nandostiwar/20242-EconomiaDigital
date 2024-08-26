@@ -1,0 +1,10 @@
+.Card {
+width: 300px;
+border-radius: 20px;
+box-shadow: 2px 2px 5px blueviolet;
+background-color: rgb(244, 143, 177 );
+padding: 10px;
+text-align: center;
+border: 2px solid blue;
+
+}
