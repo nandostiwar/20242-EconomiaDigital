@@ -6,5 +6,8 @@ router
     .post('/sumar', calculadoraControllers.sumar)
     .post('/restar', calculadoraControllers.restar)
     .post('/multiplicar', calculadoraControllers.multiplicar)
+    .post('/mayor', calculadoraControllers.calculeMayor)
+    .post('/menor', calculadoraControllers.calculeMenor)
+    .post('/promedio', calculadoraControllers.calculeProm)
 
 module.exports = router;

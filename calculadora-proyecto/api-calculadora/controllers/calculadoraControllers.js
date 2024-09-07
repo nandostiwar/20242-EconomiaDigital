@@ -1,5 +1,5 @@
 
-const {add, subtract, multiply} = require('../operaciones/operaciones.js');
+const {add, subtract, multiply, mayorNum, menorNum, promNum} = require('../operaciones/operaciones.js');
 
 function sumar(req, res){
     const {body} = req;
@@ -29,8 +29,37 @@ function multiplicar(req, res){
     })
 }
 
+function calculeMayor(req, res){
+    const {body} = req;
+    const {number1, number2} = body;
+    const result = mayorNum(number1, number2);
+    res.json({
+        resultado: result
+    })
+}
+
+function calculeMenor(req, res){
+    const {body} = req;
+    const {number1, number2} = body;
+    const result = menorNum(number1, number2);
+    res.json({
+        resultado: result
+    })
+}
+
+function calculeProm(req, res){
+    const {body} = req;
+    const {number1, number2} = body;
+    const result = promNum(number1, number2);
+    res.json({
+        resultado: result
+    })
+}
 module.exports = {
     sumar,
     restar,
-    multiplicar
+    multiplicar,
+    calculeMayor,
+    calculeMenor,
+    calculeProm
 }
