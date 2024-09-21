@@ -1,5 +1,5 @@
 import { useState } from "react";
-import '../styles/Calculadora.css'
+import '../styles/Calculadora.css';
 import Resultado from "./Resultado";
 
 function Calculadora(){
@@ -10,36 +10,40 @@ function Calculadora(){
     function handleSubmit(e){
         e.preventDefault();
         const operacion = e.target.value;
-        if (operacion == "sumar"){setResultado(parseFloat(number1)+parseFloat(number2))}
-        if (operacion == "restar"){setResultado(parseFloat(number1)-parseFloat(number2))}
-        if (operacion == "multiplicar"){setResultado(parseFloat(number1)*parseFloat(number2))}
 
+        // Enviar la solicitud al backend
         fetch(`http://localhost:3500/v1/calculadora/${operacion}`, {
             method: 'POST',
             headers: {"Content-Type": "application/json"},
-            body: JSON.stringify({number1, number2})
+            body: JSON.stringify({ number1: parseFloat(number1), number2: parseFloat(number2) })
         })
-            .then(res =>res.json())
-            .then(responseData => {
-                setResultado(responseData.resultado)
-                // setResultado(responseData)
-                // console.log(resultado)
-            })
+        .then(res => res.json())
+        .then(responseData => {
+            // Asignar el resultado devuelto por el backend
+            setResultado(responseData.resultado);
+        })
+        .catch(error => {
+            console.error("Error al realizar la operación:", error);
+            setResultado("Error en la operación");
+        });
     }
 
     return (
         <div className="container">
-            <h1 id="txtCalculadora">CALCULADORA XYZW</h1>
+            <h1 id="txtCalculadora">CALCULADORA</h1>
             <form>
-                <input type="text" className="number" onChange={(e)=>{setNumber1(e.target.value)}}/><br />
-                <input type="text" className="number" onChange={(e)=>{setNumber2(e.target.value)}}/><br />
+                <input type="text" className="number" onChange={(e)=>{setNumber1(e.target.value)}} /><br />
+                <input type="text" className="number" onChange={(e)=>{setNumber2(e.target.value)}} /><br />
                 <input type="submit" className="btnEnviar" value="sumar" onClick={handleSubmit}/>
                 <input type="submit" className="btnEnviar" value="restar" onClick={handleSubmit}/>
                 <input type="submit" className="btnEnviar" value="multiplicar" onClick={handleSubmit}/>
+                <input type="submit" className="btnEnviar" value="mayor" onClick={handleSubmit}/>
+                <input type="submit" className="btnEnviar" value="menor" onClick={handleSubmit}/>
+                <input type="submit" className="btnEnviar" value="prom" onClick={handleSubmit}/>
             </form>
-            <Resultado resultado={"El resultado es "+ resultado}/>
+            <Resultado resultado={"El resultado es " + resultado}/>
         </div>
     )
 }
 
-export default Calculadora
+export default Calculadora;
