@@ -18,16 +18,16 @@ body{
 .number{
     margin: 20px;
     height: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     height: 35px;
     text-align: center;
 }
 
-.btnEnviar{
+.btnOrden{
     border-radius: 10px;
-    width: 150px;
-    height: 50px;
-    background-color: rgb(121, 89, 89);
+    width: 90px;
+    height: 40px;
+    background-color: rgb(214, 70, 159);
     color: white;
     border-color: rgb(121, 89, 89);
     margin-left: 10px;
@@ -36,4 +36,30 @@ body{
 #txtCalculadora{
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cuadritos {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.cuadro {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.cuadro input[type="text"] {
+    margin-left: 5px;
+    width: 60px;
+}
+
+.btnEnviar, .btnOrden {
+    margin: 5px;
 }
