@@ -11,15 +11,30 @@ body{
     padding: 50px;
     margin: 50px;
     border-radius: 50px;
-    width: 500px;
+    width: 700px;
     display: block;
 }
 
+form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px; 
+    justify-items: center; 
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .number{
-    margin: 20px;
-    height: 20px;
+    margin: 50px;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border-radius: 10px;
-    height: 35px;
+    width: 80px;
     text-align: center;
 }
 
@@ -30,7 +45,12 @@ body{
     background-color: rgb(121, 89, 89);
     color: white;
     border-color: rgb(121, 89, 89);
+    margin-top: 30px;
     margin-left: 10px;
+}
+
+.checkbox {
+    margin-top: 5px;
 }
 
 #txtCalculadora{
