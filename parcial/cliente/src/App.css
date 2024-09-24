@@ -1,0 +1,89 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.left-column {
+    width: 45%;
+}
+
+.right-column {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    font-size: 24px;
+}
+
+.inputGroup {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputField {
+    width: 70%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.checkboxLabel {
+    font-size: 14px;
+    color: #555;
+}
+
+.buttonGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.button {
+    width: 48%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.buttonSecondary {
+    background-color: #28a745;
+}
+
+.buttonSecondary:hover {
+    background-color: #218838;
+}
+
+.resultBox {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #212529;
+}
+
+.equationInput {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
