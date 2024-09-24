@@ -1,0 +1,109 @@
+body{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+.container{
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(12, 135, 218);
+    padding: 50px;
+    margin: 50px;
+    border-radius: 50px;
+    width: 500px;
+    display: block;
+}
+
+.number{
+    margin: 20px;
+    height: 20px;
+    border-radius: 20px;
+    height: 35px;
+    text-align: center;
+}
+
+.btnOrden{
+    border-radius: 10px;
+    width: 90px;
+    height: 40px;
+    background-color: rgb(54, 57, 206);
+    color: white;
+    border-color: rgb(17, 15, 151);
+    margin-left: 10px;
+}
+
+#txtCalculadora{
+    color: rgb(32, 7, 170);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cuadritos {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+    
+}
+
+.cuadro {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.cuadro input[type="text"] {
+    margin-left: 5px;
+    width: 60px;
+}
+
+.btnEnviar, .btnOrden {
+    margin: 5px;
+}
+
+.btnLimpiar{
+    border-radius: 10px;
+    width: 90px;
+    height: 40px;
+    background-color: rgb(54, 57, 206);
+    color: white;
+    border-color: rgb(17, 15, 151);
+    margin-left: 10px;
+}
+.ecuacion-container {
+    color: rgb(32, 7, 170);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 20px; 
+    text-align: center; 
+}
+
+.ecuacion-container label {
+    font-size: 18px; 
+    margin-right: 10px; 
+    display: inline-block; 
+}
+
+.ecuacion-container input[type="text"] {
+    width: calc(100% - 100px); 
+    padding: 8px; /* Espaciado interno */
+    font-size: 16px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.ecuacion-container button {
+    margin-top: 8px; 
+    padding: 8px 10px; 
+    font-size: 16px;
+    background-color: #1317e4;
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    display: inline-block; 
+}
