@@ -1,9 +1,12 @@
-import '../styles/Resultado.css';
+import React from 'react';
+import '../styles/Resultado.css'; // Asegúrate de tener este archivo para los estilos
 
-function Resultado({resultado}){
+function Resultado({ resultado }) {
     return (
-        <p>{resultado}</p>
-    )
+        <div className="result">
+            {resultado}
+        </div>
+    );
 }
 
 export default Resultado;

@@ -1,39 +1,60 @@
-body{
-    text-align: center;
-    justify-content: center;
+.container {
+    width:300px; /* Ajustar el ancho de la calculadora */
+    margin: 0 auto; /* Centrar la calculadora */
+    padding: 60px; /* Espaciado interno */
+    border-radius: 35px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    background-color: #f9f9f9; /* Color de fondo */
+}
+
+h1#txtCalculadora {
+    text-align: center; /* Centrar el título */
+    font-size: 35px; /* Tamaño de fuente */
+    margin-bottom: 25px; /* Espacio inferior */
+    color: #007bff;
+}
+
+.input-group {
+    display: flex; /* Usar flexbox para alinear */
+    justify-content: space-between; /* Espacio entre elementos */
+    margin-bottom: 30px; /* Espaciado entre campos */
+}
+
+input[type="text"] {
+    flex: 1; /* Hacer que el campo de texto ocupe el espacio disponible */
+    padding: 10px; /* Espaciado interno del campo */
+    border: 4px solid #ccc; /* Borde del campo */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-right: 10px; /* Espacio entre el campo y el checkbox */
+}
+
+input[type="checkbox"] {
+    margin-left: 09px; /* Espacio a la izquierda del checkbox */
+}
+
+button {
+    padding: 10px 15px; /* Espaciado interno */
+    margin: 10px; /* Espacio entre botones */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #007bff; /* Color de fondo */
+    color: white; /* Color del texto */
+    font-size: 15px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    transition: background-color 0.3s; /* Transición suave al cambiar color */
+}
+
+button:hover {
+    background-color: #0056b3; /* Color al pasar el ratón sobre el botón */
+}
+
+
+.input-group {
     display: flex;
+    align-items: center; /* Alinear los elementos en el centro */
+    margin-bottom: 11px; /* Espaciado inferior entre campos */
 }
 
-.container{
-    text-align: center;
-    justify-content: center;
-    background-color: gray;
-    padding: 50px;
-    margin: 50px;
-    border-radius: 50px;
-    width: 500px;
-    display: block;
-}
-
-.number{
-    margin: 20px;
-    height: 20px;
-    border-radius: 10px;
-    height: 35px;
-    text-align: center;
-}
-
-.btnEnviar{
-    border-radius: 10px;
-    width: 150px;
-    height: 50px;
-    background-color: rgb(121, 89, 89);
-    color: white;
-    border-color: rgb(121, 89, 89);
-    margin-left: 10px;
-}
-
-#txtCalculadora{
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+input[type="checkbox"] {
+    margin-left: 10px; /* Espacio a la izquierda del checkbox */
 }

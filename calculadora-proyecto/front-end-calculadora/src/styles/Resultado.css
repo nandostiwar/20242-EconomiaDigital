@@ -1,5 +1,11 @@
-p{
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 35px;
+/* Resultado.css */
+.result {
+    background-color: #e7f3fe; /* Color de fondo suave */
+    padding: 15px; /* Espaciado interno */
+    border: 1px solid #b3d7ff; /* Borde con un color más claro */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-top: 10px; /* Margen superior */
+    font-weight: bold; /* Texto en negrita */
+    text-align: center; /* Centrar el texto */
+    color: #333; /* Color del texto */
 }
