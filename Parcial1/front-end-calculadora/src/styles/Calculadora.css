@@ -1,0 +1,71 @@
+body{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+.container{
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(108, 165, 127);
+    padding: 90px;
+    margin: 50px;
+    border-radius: 50px;
+    width: 500px;
+    display: block;
+}
+
+.number{
+    margin: 20px;
+    height: 20px;
+    border-radius: 20px;
+    height: 35px;
+    text-align: center;
+}
+
+.btnEnviar{
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    background-color: rgb(31, 63, 47);
+    color: rgb(255, 255, 255);
+    border-color: rgb(31, 63, 47);
+    margin-left: 10px;
+}
+
+#txtCalculadora{
+    color: rgb(4, 18, 10);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cuadritos {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+    
+}
+
+.cuadro {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    
+}
+
+.cuadro input[type="text"] {
+    margin-left: 5px;
+    width: 60px;
+    
+    
+}
+
+.btnEnviar, .btnOrden {
+    margin: 5px;
+    background-color: rgb(46, 95, 71);
+    
+}
