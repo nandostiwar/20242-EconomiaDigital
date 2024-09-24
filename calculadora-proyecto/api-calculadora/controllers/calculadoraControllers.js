@@ -1,36 +1,38 @@
+ 
 
-const {add, subtract, multiply} = require('../operaciones/operaciones.js');
+function fascendente(req, res) {
+    const { body } = req;
+    const { ...selectedValues } = body;
 
-function sumar(req, res){
-    const {body} = req;
-    const {number1, number2} = body;
-    const result = add(number1, number2);
-    console.log("num1: " + String(number1) + " num2: " + String(number2) + " y la suma: " + String(result))
-    res.json({
-        resultado: result
-    });
+    console.log(typeof selectedValues)
+   const objecArray = Object.values(selectedValues);
+
+   console.log(objecArray)
+    const orden = objecArray.sort((a,b) => parseInt(a) - parseInt(b));
+    const resultado = orden.join(', ');
+    console.log("ascendente"+""+orden)
+    
+    res.json(resultado);
 }
 
-function restar(req, res){
-    const {body} = req;
-    const {number1, number2} = body;
-    const result = subtract(number1, number2);
-    res.json({
-        resultado: result
-    })
+function fdescendente(req, res) {
+    const { body } = req;
+    const { ...selectedValues  } = body;
+
+    const objecArray1 = Object.values(selectedValues);
+
+ 
+     const orden1 = objecArray1.sort((a,b) => parseInt(b) - parseInt(a));
+
+     const resultado = orden1.join(', ');
+     console.log("descendente"+" "+orden1)
+
+    res.json(resultado);
 }
 
-function multiplicar(req, res){
-    const {body} = req;
-    const {number1, number2} = body;
-    const result = multiply(number1, number2);
-    res.json({
-        resultado: result
-    })
-}
+
 
 module.exports = {
-    sumar,
-    restar,
-    multiplicar
+    fascendente,
+    fdescendente
 }

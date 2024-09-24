@@ -1,39 +1,64 @@
-body{
+/* Calculadora.css */
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    border: 2px solid #111111;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #807171;
+}
+
+h1#txtCalculadora {
     text-align: center;
-    justify-content: center;
+    color: #0a0a0a;
+    margin-bottom: 40px;
+}
+
+form {
     display: flex;
+    align-items:self-start;
+    flex-direction: column;
 }
 
-.container{
-    text-align: center;
-    justify-content: center;
-    background-color: gray;
-    padding: 50px;
-    margin: 50px;
-    border-radius: 50px;
-    width: 500px;
-    display: block;
+label {
+    margin: 30px 0;
+    font-weight: bold;
+    display: inline-flex;
 }
 
-.number{
-    margin: 20px;
-    height: 20px;
-    border-radius: 10px;
-    height: 35px;
-    text-align: center;
+input[type="text"] {
+    padding: 15px;
+    margin-bottom: 19px;
+    border: 3px solid #0f0f0f;
+    border-radius: 9%;
+    font-size: 14px;
 }
 
-.btnEnviar{
-    border-radius: 10px;
-    width: 150px;
-    height: 50px;
-    background-color: rgb(121, 89, 89);
-    color: white;
-    border-color: rgb(121, 89, 89);
-    margin-left: 10px;
+input[type="checkbox"] {
+    margin-right: 17px;
 }
 
-#txtCalculadora{
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+input[type="submit"],
+button {
+    background-color: #0ba7f0;
+    color: rgb(14, 13, 13);
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: #13e0b4;
+}
+
+h3 {
+    margin-top: 60px;
+    color: #333;
+    text-align:start;
 }
