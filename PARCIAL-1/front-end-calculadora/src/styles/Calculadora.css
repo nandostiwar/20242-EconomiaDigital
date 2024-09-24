@@ -1,0 +1,85 @@
+body{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+.container{
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(4, 158, 151);
+    padding: 50px;
+    margin: 50px;
+    border-radius: 50px;
+    width: 500px;
+    display: block;
+}
+
+.number{
+    margin: 20px;
+    height: 20px;
+    border-radius: 20px;
+    height: 35px;
+    text-align: center;
+}
+
+.btnOrden{
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    border-radius: 16px;
+    width: 110px;
+    height: 40px;
+    background-color: rgb(136, 200, 47);
+    color: rgb(0, 0, 0);
+    border-color: rgb(13, 139, 146);
+    margin: 15px 0;
+    display: block;
+}
+
+
+#txtCalculadora{
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bloques {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.labelEstilo {
+    font-family: 'Arial', sans-serif; 
+    font-weight: bold; 
+    font-size: 16px; 
+    color: rgb(0, 0, 0); 
+    margin-right: 10px; 
+}
+
+.mensaje-info {
+    margin-top: 15px; 
+    font-family: 'Arial', sans-serif;
+    font-size: 16px; 
+    color: rgb(0, 0, 0); 
+}
+
+
+.cuadro {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.cuadro input[type="text"] {
+    margin-left: 5px;
+    width: 60px;
+}
+
+.btnEnviar, .btnOrden {
+    margin: 5px;
+}

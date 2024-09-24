@@ -25,6 +25,7 @@ router
     .post('/sumar', validarEntradas, calculadoraControllers.sumar)
     .post('/restar', validarEntradas, calculadoraControllers.restar)
     .post('/multiplicar', validarEntradas, calculadoraControllers.multiplicar)
+    .post('/dividir', validarEntradas, calculadoraControllers.dividir)
     .post('/ordenarAscendente', validarEntradas, calculadoraControllers.ordenarAscendente)
     .post('/ordenarDescendente', validarEntradas, calculadoraControllers.ordenarDescendente)
     .post('/ecuacion', calculadoraControllers.procesarEcuacion); 

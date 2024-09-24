@@ -1,4 +1,5 @@
-const math = require('mathjs'); 
+const math = require('algebrite'); //LIBRERIA
+
 /**
  * Verifica si el valor es un número válido
  * @param {any} value
@@ -87,32 +88,41 @@ function ordenarDescendente(numeros) {
     return numeros.sort((a, b) => b - a);
 }
 
-/**
- * Procesar y evaluar una ecuación de forma segura
- * @param {Object} req
- * @param {Object} res
- */
 function procesarEcuacion(req, res) {
     const { equation, variables } = req.body;
 
     try {
-        // Reemplazar las variables en la ecuación
-        let evaluada = equation;
-        for (const [key, value] of Object.entries(variables)) {
-            if (!isValidNumber(value)) {
-                throw new Error(`La variable ${key} debe ser un número.`);
-            }
-            evaluada = evaluada.replace(new RegExp(key, 'g'), value);
+        // Validar que la ecuación no esté vacía y sea de tipo string
+        if (!equation || typeof equation !== 'string') {
+            return res.status(400).json({ error: 'La ecuación es inválida o está vacía.' });
         }
 
-        // Evaluar la ecuación de manera segura usando mathjs
-        const resultado = math.evaluate(evaluada);
+        let evaluada = equation;
+
+        // Paso 1: Agregar multiplicación explícita entre números y variables (ejemplo: 2B -> 2 * B)
+        // Esta expresión regular asegura que siempre haya un * entre un número y una variable.
+        evaluada = evaluada.replace(/(\d+)([a-zA-Z]+)/g, '$1 * $2');
+
+        // Paso 2: Reemplazar las variables con sus valores correspondientes
+        for (const [key, value] of Object.entries(variables)) {
+            if (!isValidNumber(value)) {
+                throw new Error(`La variable ${key} debe ser un número válido.`);
+            }
+            // Reemplaza las variables con sus valores en la ecuación
+            evaluada = evaluada.replace(new RegExp(`\\b${key}\\b`, 'g'), value);
+        }
+
+        // Evaluar la ecuación usando Algebrite
+        const resultado = math.eval(evaluada);
         res.json({ resultado });
     } catch (error) {
         console.error('Error al procesar la ecuación:', error);
         res.status(500).json({ error: 'Error al procesar la ecuación' });
     }
 }
+
+
+
 
 // Exportar las funciones
 module.exports = {

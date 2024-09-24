@@ -11,7 +11,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "algebra.js": "^0.2.6",
+    "algebrite": "^1.4.0",
+    "api-calculadora": "file:",
     "cors": "^2.8.5",
+    "expr-eval": "^2.0.2",
     "express": "^4.18.2",
     "mathjs": "^13.1.1"
   },

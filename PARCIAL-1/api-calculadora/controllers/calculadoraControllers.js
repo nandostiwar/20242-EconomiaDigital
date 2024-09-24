@@ -46,6 +46,24 @@ function multiplicar(req, res) {
         res.status(400).json({ error: error.message });
     }
 }
+/**
+ * Dividir dos números
+ * @param {Object} req
+ * @param {Object} res
+ */
+function dividir(req, res) {
+    const { number1, number2 } = req.body;
+    try {
+        if (number2 === 0) {
+            throw new Error('No se puede dividir entre 0');
+        }
+        const result = number1 / number2;
+        res.json({ resultado: result });
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+}
+
 
 /**
  * Función genérica para ordenar números
@@ -129,6 +147,7 @@ module.exports = {
     sumar,
     restar,
     multiplicar,
+    dividir,
     ordenarAscendente,
     ordenarDescendente,
     procesarEcuacion
