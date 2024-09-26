@@ -1,30 +1,39 @@
 
 /**
- * Sumar dos cantidades numéricas
- * @param {Number} a 
- * @param {Number} b 
- * @returns Number
+ * 
+ * @param {Array<Number>} numeros
+ * @returns {Array<Number>}
  */
-function add(a, b){
-    let number1 = parseInt(a);
-    let number2 = parseInt(b);
-    return number1 + number2;
-}
 
-function subtract(a, b){
-    let number1 = parseInt(a);
-    let number2 = parseInt(b);
-    return number1 - number2;
+function ordenarAscendente(numeros) {
+ return numeros.sort((a, b) => a - b);
 }
+/**
+ *
+ * @param {Array<Number>} numeros
+ * @returns {Array<Number>}
+ */
 
-function multiply(a, b){
-    let number1 = parseInt(a);
-    let number2 = parseInt(b);
-    return number1 * number2;
+function ordenarDescendente(numeros) {
+ return numeros.sort((a, b) => b - a);
 }
+function evaluarEcuacion(ecuacion, valores) {
+    const ecuacionReemplazada = ecuacion.replace(/([2-9]?)([A-F])/g, (match, coef, letra) => {
+      const numero = valores[letra];
+      return coef ? `${coef}*${numero}` : numero;
+    });
+    
+    try {
+      const resultado = eval(ecuacionReemplazada);
+      return resultado;
+    } catch (error) {
+      throw new Error('Error al calcular la ecuación');
+    }
+  }
+  
 
 module.exports = {
-    add,
-    subtract,
-    multiply
+    ordenarAscendente,
+    ordenarDescendente,
+    evaluarEcuacion
 }
