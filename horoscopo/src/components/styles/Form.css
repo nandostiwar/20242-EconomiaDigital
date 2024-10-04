@@ -1,0 +1,93 @@
+body {
+    justify-content: center;
+    text-align: center;
+}
+
+.entry {
+    border-radius: 10px;
+    padding: 10px 20px 10px 35px;
+}
+
+form {
+    padding: 20px;
+    padding-top: 10%;
+}
+
+#btnEnviar {
+    margin-top: 20px;
+    background-color: rgb(48, 27, 238);
+    padding: 5px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border-radius: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+.txt {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#txtBienvenida {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: oblique;
+    color: white;
+}
+
+/* Contenedor para los botones de Ingresar y Registrar en una fila */
+.inline-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacio entre los botones */
+}
+
+#btnRegister {
+    margin-top: 20px;
+    background-color: rgb(48, 27, 238);
+    padding: 5px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border-radius: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+#btnRegister:hover {
+    background-color: rgb(30, 17, 150);
+}
+
+#btnForgotPassword {
+    margin-top: 20px;
+    background-color: rgb(48, 27, 238);
+    padding: 5px 35px;
+    border-radius: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    cursor: pointer;
+}
+
+#btnForgotPassword:hover {
+    background-color: rgb(30, 17, 150);
+}
+
+/* Botón de "Olvidé mi contraseña" centrado debajo de los otros dos */
+.button-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Estilo para el botón Volver */
+#btnVolver {
+    margin-top: 20px;
+    background-color: rgb(48, 27, 238);
+    padding: 5px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border-radius: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+#btnVolver:hover {
+    background-color: rgb(30, 17, 150);
+}
