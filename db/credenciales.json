@@ -1,0 +1,17 @@
+{
+  "admin": {
+    "password": "admin123"
+  },
+  "maria": {
+    "password": "maria123++"
+  },
+  "pedro": {
+    "password": "pedro123+*"
+  },
+  "prueba": {
+    "password": "prueba123"
+  },
+  "prueba3": {
+    "password": "mision123"
+  }
+}
