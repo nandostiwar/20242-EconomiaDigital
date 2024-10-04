@@ -1,5 +1,4 @@
 import { Navigate, useNavigate } from "react-router-dom";
-import './styles/AdminHome.css'
 import { useState } from "react";
 
 function AdminHome({user}){
@@ -34,26 +33,36 @@ function AdminHome({user}){
 
     return (
         <div class="container">
-            <h2 id="textoAdmin">Edita un Signo Zodiacal</h2>
-            <select id="editSignos" onClick={handleSelect}>
-                <option value="0">Seleciona un signo zodiacal</option>
-                <option value="Aries">Aries</option>
-                <option value="Geminis">Géminis</option>
-                <option value="Cancer">Cáncer</option>
-                <option value="Leo">Leo</option>
-                <option value="Virgo">Virgo</option>
-                <option value="Libra">Libra</option>
-                <option value="Escorpio">Escorpio</option>
-                <option value="Sagitario">Sagitario</option>
-                <option value="Capricornio">Capricornio</option>
-                <option value="Acuario">Acuario</option>
-                <option value="Piscis">Piscis</option>
-            </select>
-            <textarea id="textoEditar" cols="50" rows="10" onChange={(e)=> setTextoEditar(e.target.value)}>
+            
+            <h2  className="mt-4" id="textoAdmin">Edita un Signo Zodiacal</h2>
+            <div className=" col col-6 mt-3">
+                <div>
+                    <select class="form-select" id="editSignos" onClick={handleSelect}>
+                        <option value="0">Seleciona un signo zodiacal</option>
+                        <option value="Aries">Aries</option>
+                        <option value="Geminis">Géminis</option>
+                        <option value="Cancer">Cáncer</option>
+                        <option value="Leo">Leo</option>
+                        <option value="Virgo">Virgo</option>
+                        <option value="Libra">Libra</option>
+                        <option value="Escorpio">Escorpio</option>
+                        <option value="Sagitario">Sagitario</option>
+                        <option value="Capricornio">Capricornio</option>
+                        <option value="Acuario">Acuario</option>
+                        <option value="Piscis">Piscis</option>
+                    </select>
+                </div>
 
-            </textarea>
-            <button id="btnEditar" onClick={handleClick}>Editar</button>
-            <button id="btnHomeAdmin" onClick={goHome}>Home</button>
+                <div className="mt-2 mb-4">
+                    <textarea class="form-control" id="textoEditar" cols="50" rows="5" onChange={(e)=> setTextoEditar(e.target.value)}></textarea>
+                </div>
+
+                <div > 
+                    <button className="btn btn-primary me-2" id="btnEditar" onClick={handleClick}>Editar</button>
+                    <button  className="btn btn-secondary" id="btnHomeAdmin" onClick={goHome}>Home</button>
+                </div>
+
+            </div>
         </div>
     )
 }

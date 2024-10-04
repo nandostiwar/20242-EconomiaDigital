@@ -1,8 +1,7 @@
-import './styles/TextSigno.css';
 
 function TextSigno({texto}){
     return (
-        <textarea id="textoSigno" value={texto} cols="50" rows="10">
+        <textarea className='form-control' id="textoSigno" value={texto} cols="20" rows="15">
 
         </textarea>
     )

@@ -2,6 +2,7 @@ import './App.css';
 import Form from './components/Form';
 import UserHome from './components/UserHome';
 import AdminHome from './components/AdminHome';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'; 
 import { useState } from 'react';
 
